@@ -1,0 +1,14 @@
+To,Location
+E[0],PIN_N25
+E[1],PIN_N26
+E[2],PIN_P25
+E[3],PIN_AE14
+
+Display_7seg[0],PIN_AF10
+Display_7seg[1],PIN_AB12
+Display_7seg[2],PIN_AC12
+Display_7seg[3],PIN_AD11
+Display_7seg[4],PIN_AE11
+Display_7seg[5],PIN_V14
+Display_7seg[6],PIN_V13    
+

@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Nov 29 20:11:15 2024
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Revision Name : mean_4_clocks
+Top-level Entity Name : mean_4_clocks
+Family : Cyclone II
+Total logic elements : 228
+    Total combinational functions : 100
+    Dedicated logic registers : 128
+Total registers : 128
+Total pins : 66
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

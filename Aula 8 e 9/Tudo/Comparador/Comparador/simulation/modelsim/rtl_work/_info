@@ -1,0 +1,79 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Hermes\PN2\Aula 4\Comparador\simulation\modelsim
+Ecomparador
+Z1 w1729304823
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dD:\Hermes\PN2\Aula 4\Comparador\simulation\modelsim
+Z6 8D:/Hermes/PN2/Aula 4/Comparador/comparador.vhd
+Z7 FD:/Hermes/PN2/Aula 4/Comparador/comparador.vhd
+l0
+L5
+V2SVz;cgSKcI93>7[N_mN83
+Z8 OV;C;10.1d;51
+31
+Z9 !s108 1729304947.558000
+Z10 !s90 -reportprogress|300|-93|-work|work|D:/Hermes/PN2/Aula 4/Comparador/comparador.vhd|
+Z11 !s107 D:/Hermes/PN2/Aula 4/Comparador/comparador.vhd|
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+!s100 U7=S=;GWUYdm;nU6RYGa81
+!i10b 1
+Artl
+R2
+R3
+R4
+DEx4 work 10 comparador 0 22 2SVz;cgSKcI93>7[N_mN83
+l22
+L21
+V:El3X[cgia[LfW^V^ozQ?0
+R8
+31
+R9
+R10
+R11
+R12
+R13
+!s100 Db:CfBS>7AE6P`ZfmOeOk2
+!i10b 1
+Etb_comparador
+Z14 w1729301075
+R2
+R3
+R4
+R5
+Z15 8D:/Hermes/PN2/Aula 4/Comparador/tb_comparador.vhd
+Z16 FD:/Hermes/PN2/Aula 4/Comparador/tb_comparador.vhd
+l0
+L5
+VFLcHPd]Ngc<_gW@RB6Tnk3
+!s100 gI?6RG<62Y^LlK>9HzDP33
+R8
+31
+!i10b 1
+Z17 !s108 1729304947.730000
+Z18 !s90 -reportprogress|300|-93|-work|work|D:/Hermes/PN2/Aula 4/Comparador/tb_comparador.vhd|
+Z19 !s107 D:/Hermes/PN2/Aula 4/Comparador/tb_comparador.vhd|
+R12
+R13
+Ateste
+R2
+R3
+R4
+DEx4 work 13 tb_comparador 0 22 FLcHPd]Ngc<_gW@RB6Tnk3
+l31
+L8
+VN?UN:18Ag8lJz92K]YFeV2
+!s100 9bA_L18EzAQIoPGJKA0a23
+R8
+31
+!i10b 1
+R17
+R18
+R19
+R12
+R13

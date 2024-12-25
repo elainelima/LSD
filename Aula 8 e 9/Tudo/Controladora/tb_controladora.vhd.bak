@@ -1,0 +1,66 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity tb_controladora is
+end tb_controladora;
+
+architecture arch of tb_controladora is
+	component Controladora is 
+			port (
+			  RESET   : in    std_logic; -- reset input
+			  CLOCK   : in    std_logic; -- clock input
+			  Maior     : in    std_logic;
+			  Menor     : in    std_logic;
+			  Load_E    : out   std_logic;
+			  Reset_MA  : out   std_logic;
+			  Subindo   : out   std_logic;
+			  Descendo  : out   std_logic;
+			  Atualize  : out   std_logic
+    );
+	end component;
+	
+	--signal Fio_Sig_E: std_logic_vector (3 downto 0);
+	--signal Fio_Sig_M: std_logic_vector (3 downto 0);
+	signal Fio_RESET: std_logic_vector (3 downto 0);
+	signal Fio_CLOCK:  std_logic  := '0'; 
+	signal Fio_Reset_MA:  std_logic;
+	signal Fio_Load_E:  std_logic;
+	signal Fio_Pino_Descendo: std_logic;
+	signal Fio_Pino_Subindo:  std_logic;
+	signal Fio_Pino_Atualize:  std_logic; 
+	signal Fio_Sobe:  std_logic;
+	signal Fio_Desce:  std_logic;
+	signal Fio_Pino_Maior:  std_logic;
+	signal Fio_Pino_Menor:  std_logic;
+	signal Fio_Media:  std_logic_vector((6) downto 0);
+			
+begin
+	 uut_Datapath: datapath
+	 
+	 generic map (DATA_WIDTH => 4)
+		port map(
+		  E   => Fio_E,
+        clock =>  Fio_clock,
+        Reset_MA =>  Fio_Reset_MA,
+        Load_E =>  Fio_Load_E,
+		  Pino_Descendo=> Fio_Pino_Descendo,
+		  Pino_Subindo=> Fio_Pino_Subindo,
+		  Pino_Atualize=> Fio_Pino_Atualize,
+		  Sobe=> Fio_Sobe,
+		  Desce=> Fio_Desce,
+		  Pino_Maior=> Fio_Pino_Maior,
+		  Pino_Menor=> Fio_Pino_Menor,
+		  Media=>Fio_Media
+		);
+
+		
+		Fio_clock <= not Fio_clock after 5 ns;
+		Fio_E <= x"0", x"F" after 20 ns, x"A" after 40 ns, x"9" after 60 ns;
+		Fio_Reset_MA <= '0';
+		Fio_Load_E <= '1';
+		Fio_Pino_Descendo <= '1', '0' after 20 ns, '1' after 40 ns, '0' after 60 ns;
+		Fio_Pino_Subindo <= '1', '1' after 20 ns, '0' after 40 ns, '0' after 60 ns;
+		Fio_Pino_Atualize <= '1';
+    
+end arch;

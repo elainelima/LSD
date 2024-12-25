@@ -1,0 +1,39 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+use ieee.numeric_std.all;
+
+entity comparador is
+generic
+	(
+		DATA_WIDTH : natural := 16
+	);
+
+	port 
+	(
+		a	: in std_logic_vector	((DATA_WIDTH-1) downto 0);
+		b	: in std_logic_vector	((DATA_WIDTH-1) downto 0);
+		maior	: out std_logic;
+		menor	: out std_logic;
+		igual	: out std_logic
+	);
+end comparador;
+
+architecture rtl of comparador is
+begin
+	process is
+		if signed(a) > signed(b) then
+			maior <= true;
+			menor <= false;
+			igual <= false;
+		elsif signed(a) < signed(b) then
+			maior <= false;
+			menor <= true;
+			igual <= false;
+		else
+			maior <= false;
+			menor <= false;
+			igual <= true;
+		end if;
+	end process;
+end rtl;
+

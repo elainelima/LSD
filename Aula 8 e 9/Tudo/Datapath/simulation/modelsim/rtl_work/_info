@@ -1,0 +1,221 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Aula 8\Tudo\Datapath\simulation\modelsim
+Ebcd_7seg
+Z1 w1732920514
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dC:\Aula 8\Tudo\Datapath\simulation\modelsim
+Z5 8C:/Aula 8/Tudo/BCD_7seg/BCD_7seg/BCD_7seg.vhd
+Z6 FC:/Aula 8/Tudo/BCD_7seg/BCD_7seg/BCD_7seg.vhd
+l0
+L4
+V`o6UecCXXcKXh[NWIfEzD0
+Z7 OV;C;10.1d;51
+31
+Z8 !s108 1733883384.804000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Aula 8/Tudo/BCD_7seg/BCD_7seg/BCD_7seg.vhd|
+Z10 !s107 C:/Aula 8/Tudo/BCD_7seg/BCD_7seg/BCD_7seg.vhd|
+Z11 o-93 -work work -O0
+Z12 tExplicit 1
+!s100 Mj?kZhT<CDN2m7femMXLG1
+!i10b 1
+Awith_select_bcd7seg
+R2
+R3
+DEx4 work 8 bcd_7seg 0 22 `o6UecCXXcKXh[NWIfEzD0
+l12
+L11
+V68SOUlK];EB9_6D`f82`R3
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 m5lPj[nI>=i7UWd9WO7_L0
+!i10b 1
+Ecomparador
+Z13 w1729304823
+Z14 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+R2
+R3
+R4
+Z15 8C:/Aula 8/Tudo/Comparador/Comparador/comparador.vhd
+Z16 FC:/Aula 8/Tudo/Comparador/Comparador/comparador.vhd
+l0
+L5
+V2SVz;cgSKcI93>7[N_mN83
+R7
+31
+Z17 !s108 1733883384.514000
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/Aula 8/Tudo/Comparador/Comparador/comparador.vhd|
+Z19 !s107 C:/Aula 8/Tudo/Comparador/Comparador/comparador.vhd|
+R11
+R12
+!s100 U7=S=;GWUYdm;nU6RYGa81
+!i10b 1
+Artl
+R14
+R2
+R3
+DEx4 work 10 comparador 0 22 2SVz;cgSKcI93>7[N_mN83
+l22
+L21
+V:El3X[cgia[LfW^V^ozQ?0
+R7
+31
+R17
+R18
+R19
+R11
+R12
+!s100 Db:CfBS>7AE6P`ZfmOeOk2
+!i10b 1
+Edatapath
+Z20 w1733882764
+R2
+R3
+R4
+Z21 8C:/Aula 8/Tudo/Datapath/Datapath.vhd
+Z22 FC:/Aula 8/Tudo/Datapath/Datapath.vhd
+l0
+L4
+VdZ<jYmFKUbEDbV6LIeVZh2
+R7
+31
+Z23 !s108 1733883385.142000
+Z24 !s90 -reportprogress|300|-93|-work|work|C:/Aula 8/Tudo/Datapath/Datapath.vhd|
+Z25 !s107 C:/Aula 8/Tudo/Datapath/Datapath.vhd|
+R11
+R12
+!s100 Y4S7F_GV_RZ46h<HCk@e?1
+!i10b 1
+Artl
+R2
+R3
+DEx4 work 8 datapath 0 22 dZ<jYmFKUbEDbV6LIeVZh2
+l89
+L27
+Vi`zgPI^:ho4?Ul4WT==Sh1
+R7
+31
+R23
+R24
+R25
+R11
+R12
+!s100 Rh?]bgHzg?:=>>LBSkZ?:1
+!i10b 1
+Emean_4_clocks
+Z26 w1731109971
+R14
+R2
+R3
+R4
+Z27 8C:/Aula 8/Tudo/Reg_MA/mean_4_clocks/mean_4_clocks.vhd
+Z28 FC:/Aula 8/Tudo/Reg_MA/mean_4_clocks/mean_4_clocks.vhd
+l0
+L5
+V]c8n30J?OJaFU9^G1fF3Z2
+R7
+31
+Z29 !s108 1733883384.253000
+Z30 !s90 -reportprogress|300|-93|-work|work|C:/Aula 8/Tudo/Reg_MA/mean_4_clocks/mean_4_clocks.vhd|
+Z31 !s107 C:/Aula 8/Tudo/Reg_MA/mean_4_clocks/mean_4_clocks.vhd|
+R11
+R12
+!s100 _jlXe_dl]V=ZDG[E2nKWz1
+!i10b 1
+Aarch
+R14
+R2
+R3
+DEx4 work 13 mean_4_clocks 0 22 ]c8n30J?OJaFU9^G1fF3Z2
+l26
+L23
+VDIT>[o4YK==0RFdf[RP262
+R7
+31
+R29
+R30
+R31
+R11
+R12
+!s100 TiGBYl9Y2:TRh=7:QDkzK0
+!i10b 1
+Eregw
+Z32 w1732921477
+R2
+R3
+R4
+Z33 8C:/Aula 8/Tudo/RegW/RegW/RegW.vhd
+Z34 FC:/Aula 8/Tudo/RegW/RegW/RegW.vhd
+l0
+L4
+VJlT9:3:G=bSJ8cXG;2kSC2
+R7
+31
+Z35 !s108 1733883383.917000
+Z36 !s90 -reportprogress|300|-93|-work|work|C:/Aula 8/Tudo/RegW/RegW/RegW.vhd|
+Z37 !s107 C:/Aula 8/Tudo/RegW/RegW/RegW.vhd|
+R11
+R12
+!s100 keCj>i:3`ON_T7S5AlOJ11
+!i10b 1
+Artl
+R2
+R3
+DEx4 work 4 regw 0 22 JlT9:3:G=bSJ8cXG;2kSC2
+l22
+L21
+VL=Z^OPB0KJfd93H8X?8m>0
+R7
+31
+R35
+R36
+R37
+R11
+R12
+!s100 _0HKVA`:nFjB@3n_XAh>^1
+!i10b 1
+Etb_datapath
+Z38 w1733883342
+R14
+R2
+R3
+R4
+Z39 8C:/Aula 8/Tudo/Datapath/tb_datapath.vhd
+Z40 FC:/Aula 8/Tudo/Datapath/tb_datapath.vhd
+l0
+L5
+VXEgQIl]UFl>b5NA8j?EBM3
+!s100 ;bk26mNKP[X8Edj@9zKg23
+R7
+31
+!i10b 1
+Z41 !s108 1733883385.398000
+Z42 !s90 -reportprogress|300|-93|-work|work|C:/Aula 8/Tudo/Datapath/tb_datapath.vhd|
+Z43 !s107 C:/Aula 8/Tudo/Datapath/tb_datapath.vhd|
+R11
+R12
+Aarch
+R14
+R2
+R3
+DEx4 work 11 tb_datapath 0 22 XEgQIl]UFl>b5NA8j?EBM3
+l47
+L8
+V8NC8ol4@V7EQ8<9o=m4BG3
+!s100 6fVRFiVRI`_<`_mBQ[CEP3
+R7
+31
+!i10b 1
+R41
+R42
+R43
+R11
+R12

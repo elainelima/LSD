@@ -1,0 +1,68 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity tb_datapath is
+end tb_datapath;
+
+architecture arch of tb_datapath is
+	component datapath is 
+		generic
+			(
+				DATA_WIDTH : natural := 4
+			);
+
+			port( 
+				E: in std_logic_vector((DATA_WIDTH-1) downto 0);
+				clock: in std_logic; 
+				Reset_MA: in std_logic;
+				Load_E: in std_logic;
+				Pino_Descendo: in std_logic;
+				Pino_Subindo: in std_logic;
+				Pino_Atualize: in std_logic; 
+				Sobe: out std_logic;
+				Desce: out std_logic;
+				Pino_Maior: out std_logic;
+				Pino_Menor: out std_logic;
+				Media: out std_logic_vector((6) downto 0)
+				
+			);
+	end component;
+	
+	signal Sig_E: std_logic_vector ((DATA_WIDTH-1) downto 0);
+	signal Sig_M: std_logic_vector ((DATA_WIDTH-1) downto 0);
+		
+begin
+	 uut_Datapath: datapaph
+	 
+	 generic map (W => 4)
+		port map(
+		  E   => E,
+        clock =>  clock,
+        Reset_MA =>  Reset_MA,
+        Load_E =>  Load_E,
+		  Pino_Descendo=>Pino_Descendo,
+		  Pino_Subindo=>Pino_Subindo,
+		  Pino_Atualize=>Pino_Atualize,
+		  Sobe=>Sobe,
+		  Desce=>Desce,
+		  Pino_Maior=>Pino_Maior,
+		  Pino_Menor=>Pino_Menor,
+		  Media=>Media
+		);
+
+		
+		clock <= not fio_clk after 5 ns;
+
+	
+		
+		test_mean_4: process
+		begin 
+				INPUT <= x"2";
+				wait for 400 ns;
+				INPUT <= x"F";
+				wait for 400 ns;
+		end process;
+	
+    
+end arch;

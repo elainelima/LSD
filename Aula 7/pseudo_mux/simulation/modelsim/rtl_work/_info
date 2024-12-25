@@ -1,0 +1,75 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Hermes\PN2\Aula 7\pseudo_mux\simulation\modelsim
+Epseudo_mux
+Z1 w1732316050
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dD:\Hermes\PN2\Aula 7\pseudo_mux\simulation\modelsim
+Z5 8D:/Hermes/PN2/Aula 7/pseudo_mux/pseudo_mux.vhd
+Z6 FD:/Hermes/PN2/Aula 7/pseudo_mux/pseudo_mux.vhd
+l0
+L4
+VLDMERKoO`Y4:8=X::6;lC0
+Z7 OV;C;10.1d;51
+31
+Z8 !s108 1732318321.828000
+Z9 !s90 -reportprogress|300|-93|-work|work|D:/Hermes/PN2/Aula 7/pseudo_mux/pseudo_mux.vhd|
+Z10 !s107 D:/Hermes/PN2/Aula 7/pseudo_mux/pseudo_mux.vhd|
+Z11 o-93 -work work -O0
+Z12 tExplicit 1
+!s100 1`99hF@f5ah9c4;dRhl;91
+!i10b 1
+Aarch
+R2
+R3
+DEx4 work 10 pseudo_mux 0 22 LDMERKoO`Y4:8=X::6;lC0
+l17
+L14
+VeVcJX07nQQ4:i6Z9?@4TT2
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 YTA@:5z5>`@IzAkFj69bN0
+!i10b 1
+Etb_pseudo_mux
+Z13 w1732318208
+R2
+R3
+R4
+Z14 8D:/Hermes/PN2/Aula 7/pseudo_mux/tb_pseudo_mux.vhd
+Z15 FD:/Hermes/PN2/Aula 7/pseudo_mux/tb_pseudo_mux.vhd
+l0
+L4
+V=[kUe;jSfF]`;3Ye9^<<f1
+!s100 SAG3flzML5AbS?HXHD]V32
+R7
+31
+!i10b 1
+Z16 !s108 1732318321.953000
+Z17 !s90 -reportprogress|300|-93|-work|work|D:/Hermes/PN2/Aula 7/pseudo_mux/tb_pseudo_mux.vhd|
+Z18 !s107 D:/Hermes/PN2/Aula 7/pseudo_mux/tb_pseudo_mux.vhd|
+R11
+R12
+Ateste
+R2
+R3
+DEx4 work 13 tb_pseudo_mux 0 22 =[kUe;jSfF]`;3Ye9^<<f1
+l28
+L7
+VEnPImO2cdol9dI<SHC2Sf3
+!s100 g2Bh7jH=iz4>TEFoU:CHc0
+R7
+31
+!i10b 1
+R16
+R17
+R18
+R11
+R12

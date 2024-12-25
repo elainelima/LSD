@@ -1,0 +1,77 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Aula 8 e 9 v2\Tudo\Controladora\simulation\modelsim
+Econtroladora
+Z1 w1733963510
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dC:\Aula 8 e 9 v2\Tudo\Controladora\simulation\modelsim
+Z5 8C:/Aula 8 e 9 v2/Tudo/Controladora/Controladora.vhd
+Z6 FC:/Aula 8 e 9 v2/Tudo/Controladora/Controladora.vhd
+l0
+L4
+V2fe5kF<?geKj<Jj>BVJ;c1
+Z7 OV;C;10.1d;51
+31
+Z8 !s108 1734027882.496000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Aula 8 e 9 v2/Tudo/Controladora/Controladora.vhd|
+Z10 !s107 C:/Aula 8 e 9 v2/Tudo/Controladora/Controladora.vhd|
+Z11 o-93 -work work -O0
+Z12 tExplicit 1
+!s100 fQ0nRf;hUcW?MVcQ4zDX@1
+!i10b 1
+Aarch
+R2
+R3
+DEx4 work 12 controladora 0 22 2fe5kF<?geKj<Jj>BVJ;c1
+l21
+L18
+V?b^1FQzhJ=E6Z^boW<8if1
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 mha9gQ=1f^SYTciBU:SKb0
+!i10b 1
+Etb_controladora
+Z13 w1734027603
+Z14 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+R2
+R3
+R4
+Z15 8C:/Aula 8 e 9 v2/Tudo/Controladora/tb_controladora.vhd
+Z16 FC:/Aula 8 e 9 v2/Tudo/Controladora/tb_controladora.vhd
+l0
+L5
+VBhlYO9jEPHaHS3e?8l_ZD0
+!s100 <_knG@j7[iTDJ2Uj_1JRN2
+R7
+31
+!i10b 1
+Z17 !s108 1734027882.808000
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/Aula 8 e 9 v2/Tudo/Controladora/tb_controladora.vhd|
+Z19 !s107 C:/Aula 8 e 9 v2/Tudo/Controladora/tb_controladora.vhd|
+R11
+R12
+Aarch
+R14
+R2
+R3
+DEx4 work 15 tb_controladora 0 22 BhlYO9jEPHaHS3e?8l_ZD0
+l34
+L8
+VZo`LB]904n[1G:HYk10D82
+!s100 Q4^eG2:G[7mfT_Ug@YgL01
+R7
+31
+!i10b 1
+R17
+R18
+R19
+R11
+R12

@@ -1,0 +1,1249 @@
+TimeQuest Timing Analyzer report for Sinalizador
+Fri Dec 13 22:46:51 2024
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'CLOCK'
+ 12. Slow Model Hold: 'CLOCK'
+ 13. Slow Model Recovery: 'CLOCK'
+ 14. Slow Model Removal: 'CLOCK'
+ 15. Slow Model Minimum Pulse Width: 'CLOCK'
+ 16. Setup Times
+ 17. Hold Times
+ 18. Clock to Output Times
+ 19. Minimum Clock to Output Times
+ 20. Fast Model Setup Summary
+ 21. Fast Model Hold Summary
+ 22. Fast Model Recovery Summary
+ 23. Fast Model Removal Summary
+ 24. Fast Model Minimum Pulse Width Summary
+ 25. Fast Model Setup: 'CLOCK'
+ 26. Fast Model Hold: 'CLOCK'
+ 27. Fast Model Recovery: 'CLOCK'
+ 28. Fast Model Removal: 'CLOCK'
+ 29. Fast Model Minimum Pulse Width: 'CLOCK'
+ 30. Setup Times
+ 31. Hold Times
+ 32. Clock to Output Times
+ 33. Minimum Clock to Output Times
+ 34. Multicorner Timing Analysis Summary
+ 35. Setup Times
+ 36. Hold Times
+ 37. Clock to Output Times
+ 38. Minimum Clock to Output Times
+ 39. Setup Transfers
+ 40. Hold Transfers
+ 41. Recovery Transfers
+ 42. Removal Transfers
+ 43. Report TCCS
+ 44. Report RSKM
+ 45. Unconstrained Paths
+ 46. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; Sinalizador                                                       ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C35F672C6                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 16     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                            ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets   ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; CLOCK      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLOCK } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+
+
++--------------------------------------------------+
+; Slow Model Fmax Summary                          ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 211.42 MHz ; 211.42 MHz      ; CLOCK      ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------+
+; Slow Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; CLOCK ; -3.730 ; -13.958       ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; CLOCK ; 0.391 ; 0.000         ;
++-------+-------+---------------+
+
+
++--------------------------------+
+; Slow Model Recovery Summary    ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; CLOCK ; -0.403 ; -5.288        ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Slow Model Removal Summary    ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; CLOCK ; 1.028 ; 0.000         ;
++-------+-------+---------------+
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; CLOCK ; -1.380 ; -28.380               ;
++-------+--------+-----------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'CLOCK'                                                                                                                                                                                            ;
++--------+-------------------------------------------------------------------+-------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                         ; To Node                                                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------------------------------------------+-------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -3.730 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[0] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.766      ;
+; -3.727 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[0] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.763      ;
+; -3.721 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[2] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.757      ;
+; -3.718 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[2] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.754      ;
+; -3.698 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[0] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.734      ;
+; -3.695 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[0] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.731      ;
+; -3.683 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[0] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.719      ;
+; -3.680 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[0] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.716      ;
+; -3.649 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[0] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.685      ;
+; -3.646 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[0] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.682      ;
+; -3.645 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[1] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.681      ;
+; -3.642 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[1] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.678      ;
+; -3.610 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[1] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.646      ;
+; -3.607 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[1] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.643      ;
+; -3.597 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[1] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.633      ;
+; -3.594 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[1] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.630      ;
+; -3.579 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[1] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.615      ;
+; -3.576 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[1] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.612      ;
+; -3.571 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[2] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.607      ;
+; -3.568 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[2] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.604      ;
+; -3.540 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[2] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.576      ;
+; -3.537 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[2] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.573      ;
+; -3.497 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[2] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.533      ;
+; -3.494 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[2] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.530      ;
+; -3.328 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[0] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.364      ;
+; -3.325 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[2] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.361      ;
+; -3.296 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[3] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.332      ;
+; -3.296 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[0] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.332      ;
+; -3.293 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[3] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.329      ;
+; -3.287 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[0] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.323      ;
+; -3.266 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[3] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.302      ;
+; -3.263 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[3] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.299      ;
+; -3.253 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[0] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.289      ;
+; -3.249 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[1] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.285      ;
+; -3.230 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[3] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.266      ;
+; -3.227 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[3] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.263      ;
+; -3.214 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[1] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.250      ;
+; -3.201 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[1] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.237      ;
+; -3.183 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[1] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.219      ;
+; -3.175 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[2] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.211      ;
+; -3.152 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[3] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.188      ;
+; -3.149 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[3] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.185      ;
+; -3.144 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[2] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.180      ;
+; -3.101 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[2] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 4.137      ;
+; -2.900 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[3] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.936      ;
+; -2.870 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[3] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.906      ;
+; -2.834 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[3] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.870      ;
+; -2.756 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[3] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 3.792      ;
+; -1.471 ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[3]              ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 2.507      ;
+; -1.468 ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[3]              ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 2.504      ;
+; -1.368 ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[1]              ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 2.404      ;
+; -1.365 ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[1]              ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 2.401      ;
+; -1.075 ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[3]              ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 2.111      ;
+; -1.063 ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[2]              ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 2.099      ;
+; -1.060 ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[2]              ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 2.096      ;
+; -1.031 ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[0]              ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 2.067      ;
+; -1.028 ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[0]              ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 2.064      ;
+; -0.966 ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[1]              ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 2.002      ;
+; -0.667 ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[2]              ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.703      ;
+; -0.629 ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[0]              ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.665      ;
+; -0.447 ; Controladora:instancia_controladora|estado_atual.S1               ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.483      ;
+; -0.444 ; Controladora:instancia_controladora|estado_atual.S1               ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.480      ;
+; -0.426 ; Controladora:instancia_controladora|estado_atual.S4               ; Datapath:instance_datapath|RegW:instancia_Reg_SD|Q[1]             ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.462      ;
+; -0.426 ; Controladora:instancia_controladora|estado_atual.S4               ; Datapath:instance_datapath|RegW:instancia_Reg_SD|Q[0]             ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.462      ;
+; -0.414 ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[2]              ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[2] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.450      ;
+; -0.290 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[2] ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[2] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.326      ;
+; -0.187 ; Controladora:instancia_controladora|estado_atual.S1               ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[0]              ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.223      ;
+; -0.187 ; Controladora:instancia_controladora|estado_atual.S1               ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[1]              ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.223      ;
+; -0.187 ; Controladora:instancia_controladora|estado_atual.S1               ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[2]              ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.223      ;
+; -0.187 ; Controladora:instancia_controladora|estado_atual.S1               ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[3]              ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.223      ;
+; -0.187 ; Controladora:instancia_controladora|estado_atual.S1               ; Datapath:instance_datapath|RegW:instancia_Reg_SD|Q[1]             ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.223      ;
+; -0.187 ; Controladora:instancia_controladora|estado_atual.S1               ; Datapath:instance_datapath|RegW:instancia_Reg_SD|Q[0]             ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.223      ;
+; -0.159 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[3] ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[3] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.195      ;
+; -0.111 ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[0]              ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[0] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.147      ;
+; -0.111 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[3] ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[3] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.147      ;
+; -0.104 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[2] ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[2] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.140      ;
+; -0.103 ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[3]              ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[3] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.139      ;
+; -0.097 ; Controladora:instancia_controladora|estado_atual.S2               ; Datapath:instance_datapath|RegW:instancia_Reg_SD|Q[0]             ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.133      ;
+; -0.086 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[1] ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[1] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.122      ;
+; -0.078 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[3] ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[3] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.114      ;
+; -0.077 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[0] ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[0] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.113      ;
+; -0.055 ; Controladora:instancia_controladora|estado_atual.S1               ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.091      ;
+; -0.040 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[0] ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[0] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.076      ;
+; 0.058  ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[2] ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[2] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.978      ;
+; 0.059  ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[0] ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[0] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.977      ;
+; 0.074  ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[1]              ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[1] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.962      ;
+; 0.098  ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[1] ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[1] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.938      ;
+; 0.103  ; Controladora:instancia_controladora|estado_atual.S3               ; Datapath:instance_datapath|RegW:instancia_Reg_SD|Q[1]             ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.933      ;
+; 0.104  ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[1] ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[1] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.932      ;
+; 0.379  ; Controladora:instancia_controladora|estado_atual.S1               ; Controladora:instancia_controladora|estado_atual.S1               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.657      ;
++--------+-------------------------------------------------------------------+-------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'CLOCK'                                                                                                                                                                                            ;
++-------+-------------------------------------------------------------------+-------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                         ; To Node                                                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------------------------------------------+-------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.391 ; Controladora:instancia_controladora|estado_atual.S1               ; Controladora:instancia_controladora|estado_atual.S1               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.666 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[1] ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[1] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.932      ;
+; 0.667 ; Controladora:instancia_controladora|estado_atual.S3               ; Datapath:instance_datapath|RegW:instancia_Reg_SD|Q[1]             ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.933      ;
+; 0.672 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[1] ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[1] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.938      ;
+; 0.696 ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[1]              ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[1] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.962      ;
+; 0.711 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[0] ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[0] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.977      ;
+; 0.712 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[2] ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[2] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.978      ;
+; 0.810 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[0] ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[0] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.076      ;
+; 0.825 ; Controladora:instancia_controladora|estado_atual.S1               ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.091      ;
+; 0.847 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[0] ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[0] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.113      ;
+; 0.848 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[3] ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[3] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.114      ;
+; 0.856 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[1] ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[1] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.122      ;
+; 0.867 ; Controladora:instancia_controladora|estado_atual.S2               ; Datapath:instance_datapath|RegW:instancia_Reg_SD|Q[0]             ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.133      ;
+; 0.873 ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[3]              ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[3] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.139      ;
+; 0.874 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[2] ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[2] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.140      ;
+; 0.881 ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[0]              ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[0] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.147      ;
+; 0.881 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[3] ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[3] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.147      ;
+; 0.929 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[3] ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[3] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.195      ;
+; 0.957 ; Controladora:instancia_controladora|estado_atual.S1               ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[0]              ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.223      ;
+; 0.957 ; Controladora:instancia_controladora|estado_atual.S1               ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[1]              ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.223      ;
+; 0.957 ; Controladora:instancia_controladora|estado_atual.S1               ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[2]              ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.223      ;
+; 0.957 ; Controladora:instancia_controladora|estado_atual.S1               ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[3]              ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.223      ;
+; 0.957 ; Controladora:instancia_controladora|estado_atual.S1               ; Datapath:instance_datapath|RegW:instancia_Reg_SD|Q[1]             ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.223      ;
+; 0.957 ; Controladora:instancia_controladora|estado_atual.S1               ; Datapath:instance_datapath|RegW:instancia_Reg_SD|Q[0]             ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.223      ;
+; 1.060 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[2] ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[2] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.326      ;
+; 1.184 ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[2]              ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[2] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.450      ;
+; 1.196 ; Controladora:instancia_controladora|estado_atual.S4               ; Datapath:instance_datapath|RegW:instancia_Reg_SD|Q[1]             ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.462      ;
+; 1.196 ; Controladora:instancia_controladora|estado_atual.S4               ; Datapath:instance_datapath|RegW:instancia_Reg_SD|Q[0]             ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.462      ;
+; 1.214 ; Controladora:instancia_controladora|estado_atual.S1               ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.480      ;
+; 1.217 ; Controladora:instancia_controladora|estado_atual.S1               ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.483      ;
+; 1.303 ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[2]              ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.569      ;
+; 1.326 ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[0]              ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.592      ;
+; 1.330 ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[0]              ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.596      ;
+; 1.399 ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[0]              ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.665      ;
+; 1.561 ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[2]              ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.827      ;
+; 1.571 ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[2]              ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.837      ;
+; 1.630 ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[1]              ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.896      ;
+; 1.634 ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[1]              ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.900      ;
+; 1.676 ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[3]              ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.942      ;
+; 1.686 ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[3]              ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.952      ;
+; 1.736 ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[1]              ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 2.002      ;
+; 1.739 ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[3]              ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 2.005      ;
+; 2.946 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[3] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.212      ;
+; 2.949 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[3] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.215      ;
+; 2.950 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[3] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.216      ;
+; 2.953 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[3] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.219      ;
+; 2.983 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[3] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.249      ;
+; 2.987 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[3] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.253      ;
+; 2.999 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[2] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.265      ;
+; 3.003 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[2] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.269      ;
+; 3.018 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[3] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.284      ;
+; 3.021 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[3] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.287      ;
+; 3.052 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[2] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.318      ;
+; 3.055 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[3] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.321      ;
+; 3.093 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[3] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.359      ;
+; 3.097 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[3] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.363      ;
+; 3.122 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[1] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.388      ;
+; 3.154 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[1] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.420      ;
+; 3.165 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[3] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.431      ;
+; 3.189 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[1] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.455      ;
+; 3.193 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[1] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.459      ;
+; 3.220 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[2] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.486      ;
+; 3.220 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[2] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.486      ;
+; 3.221 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[1] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.487      ;
+; 3.224 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[2] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.490      ;
+; 3.224 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[2] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.490      ;
+; 3.225 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[1] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.491      ;
+; 3.248 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[2] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.514      ;
+; 3.252 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[2] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.518      ;
+; 3.273 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[2] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.539      ;
+; 3.276 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[2] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.542      ;
+; 3.304 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[2] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.570      ;
+; 3.327 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[1] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.593      ;
+; 3.376 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[1] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.642      ;
+; 3.393 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[1] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.659      ;
+; 3.397 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[1] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.663      ;
+; 3.403 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[0] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.669      ;
+; 3.437 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[0] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.703      ;
+; 3.441 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[1] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.707      ;
+; 3.445 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[1] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.711      ;
+; 3.446 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[0] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.712      ;
+; 3.450 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[0] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.716      ;
+; 3.478 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[0] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.744      ;
+; 3.480 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[0] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.746      ;
+; 3.482 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[0] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.748      ;
+; 3.484 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[0] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.750      ;
+; 3.510 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[0] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.776      ;
+; 3.514 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[0] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.780      ;
+; 3.550 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[0] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.816      ;
+; 3.582 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[0] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 3.848      ;
++-------+-------------------------------------------------------------------+-------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Recovery: 'CLOCK'                                                                                                                                                                           ;
++--------+-----------------------------------------------------+-------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                           ; To Node                                                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------------------------------+-------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.403 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[0] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.439      ;
+; -0.403 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[0] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.439      ;
+; -0.403 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[1] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.439      ;
+; -0.403 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[1] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.439      ;
+; -0.403 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[2] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.439      ;
+; -0.403 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[2] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.439      ;
+; -0.403 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[3] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.439      ;
+; -0.403 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[3] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.439      ;
+; -0.258 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[0] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.294      ;
+; -0.258 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[0] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.294      ;
+; -0.258 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[1] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.294      ;
+; -0.258 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[1] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.294      ;
+; -0.258 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[2] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.294      ;
+; -0.258 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[2] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.294      ;
+; -0.258 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[3] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.294      ;
+; -0.258 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[3] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.294      ;
++--------+-----------------------------------------------------+-------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Removal: 'CLOCK'                                                                                                                                                                           ;
++-------+-----------------------------------------------------+-------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                           ; To Node                                                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------------------------+-------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 1.028 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[0] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.294      ;
+; 1.028 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[0] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.294      ;
+; 1.028 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[1] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.294      ;
+; 1.028 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[1] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.294      ;
+; 1.028 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[2] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.294      ;
+; 1.028 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[2] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.294      ;
+; 1.028 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[3] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.294      ;
+; 1.028 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[3] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.294      ;
+; 1.173 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[0] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.439      ;
+; 1.173 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[0] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.439      ;
+; 1.173 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[1] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.439      ;
+; 1.173 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[1] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.439      ;
+; 1.173 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[2] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.439      ;
+; 1.173 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[2] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.439      ;
+; 1.173 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[3] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.439      ;
+; 1.173 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[3] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.439      ;
++-------+-----------------------------------------------------+-------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'CLOCK'                                                                                                            ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                            ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; CLOCK ; Rise       ; CLOCK                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; Controladora:instancia_controladora|estado_atual.S0               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; Controladora:instancia_controladora|estado_atual.S0               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; Controladora:instancia_controladora|estado_atual.S1               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; Controladora:instancia_controladora|estado_atual.S1               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; Controladora:instancia_controladora|estado_atual.S2               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; Controladora:instancia_controladora|estado_atual.S2               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; Controladora:instancia_controladora|estado_atual.S3               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; Controladora:instancia_controladora|estado_atual.S3               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; Controladora:instancia_controladora|estado_atual.S4               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; Controladora:instancia_controladora|estado_atual.S4               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[0]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[0]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[1]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[1]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[2]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[2]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[3]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[3]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; Datapath:instance_datapath|RegW:instancia_Reg_SD|Q[0]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; Datapath:instance_datapath|RegW:instancia_Reg_SD|Q[0]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; Datapath:instance_datapath|RegW:instancia_Reg_SD|Q[1]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; Datapath:instance_datapath|RegW:instancia_Reg_SD|Q[1]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[3] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; CLOCK|combout                                                     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; CLOCK|combout                                                     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; CLOCK~clkctrl|inclk[0]                                            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; CLOCK~clkctrl|inclk[0]                                            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; CLOCK~clkctrl|outclk                                              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; CLOCK~clkctrl|outclk                                              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_E|Q[0]|clk                        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_E|Q[0]|clk                        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_E|Q[1]|clk                        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_E|Q[1]|clk                        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_E|Q[2]|clk                        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_E|Q[2]|clk                        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_E|Q[3]|clk                        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_E|Q[3]|clk                        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var1[0]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var1[0]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var1[1]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var1[1]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var1[2]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var1[2]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var1[3]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var1[3]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var2[0]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var2[0]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var2[1]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var2[1]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var2[2]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var2[2]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var2[3]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var2[3]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var3[0]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var3[0]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var3[1]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var3[1]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var3[2]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var3[2]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var3[3]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var3[3]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var4[0]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var4[0]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var4[1]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var4[1]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var4[2]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var4[2]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var4[3]|clk                    ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; E[*]      ; CLOCK      ; 0.851  ; 0.851  ; Rise       ; CLOCK           ;
+;  E[0]     ; CLOCK      ; 0.742  ; 0.742  ; Rise       ; CLOCK           ;
+;  E[1]     ; CLOCK      ; 0.851  ; 0.851  ; Rise       ; CLOCK           ;
+;  E[2]     ; CLOCK      ; 0.690  ; 0.690  ; Rise       ; CLOCK           ;
+;  E[3]     ; CLOCK      ; -0.738 ; -0.738 ; Rise       ; CLOCK           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; E[*]      ; CLOCK      ; 0.968  ; 0.968  ; Rise       ; CLOCK           ;
+;  E[0]     ; CLOCK      ; -0.512 ; -0.512 ; Rise       ; CLOCK           ;
+;  E[1]     ; CLOCK      ; -0.621 ; -0.621 ; Rise       ; CLOCK           ;
+;  E[2]     ; CLOCK      ; -0.460 ; -0.460 ; Rise       ; CLOCK           ;
+;  E[3]     ; CLOCK      ; 0.968  ; 0.968  ; Rise       ; CLOCK           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------------+
+; Clock to Output Times                                                          ;
++------------------+------------+--------+--------+------------+-----------------+
+; Data Port        ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------------+------------+--------+--------+------------+-----------------+
+; Desce            ; CLOCK      ; 7.742  ; 7.742  ; Rise       ; CLOCK           ;
+; Display_7seg[*]  ; CLOCK      ; 10.621 ; 10.621 ; Rise       ; CLOCK           ;
+;  Display_7seg[0] ; CLOCK      ; 10.621 ; 10.621 ; Rise       ; CLOCK           ;
+;  Display_7seg[1] ; CLOCK      ; 10.368 ; 10.368 ; Rise       ; CLOCK           ;
+;  Display_7seg[2] ; CLOCK      ; 10.379 ; 10.379 ; Rise       ; CLOCK           ;
+;  Display_7seg[3] ; CLOCK      ; 10.341 ; 10.341 ; Rise       ; CLOCK           ;
+;  Display_7seg[4] ; CLOCK      ; 10.368 ; 10.368 ; Rise       ; CLOCK           ;
+;  Display_7seg[5] ; CLOCK      ; 9.837  ; 9.837  ; Rise       ; CLOCK           ;
+;  Display_7seg[6] ; CLOCK      ; 10.361 ; 10.361 ; Rise       ; CLOCK           ;
+; Sobe             ; CLOCK      ; 8.250  ; 8.250  ; Rise       ; CLOCK           ;
++------------------+------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                ;
++------------------+------------+-------+-------+------------+-----------------+
+; Data Port        ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------------+------------+-------+-------+------------+-----------------+
+; Desce            ; CLOCK      ; 7.742 ; 7.742 ; Rise       ; CLOCK           ;
+; Display_7seg[*]  ; CLOCK      ; 8.670 ; 8.670 ; Rise       ; CLOCK           ;
+;  Display_7seg[0] ; CLOCK      ; 9.066 ; 9.066 ; Rise       ; CLOCK           ;
+;  Display_7seg[1] ; CLOCK      ; 8.814 ; 8.814 ; Rise       ; CLOCK           ;
+;  Display_7seg[2] ; CLOCK      ; 8.828 ; 8.828 ; Rise       ; CLOCK           ;
+;  Display_7seg[3] ; CLOCK      ; 8.815 ; 8.815 ; Rise       ; CLOCK           ;
+;  Display_7seg[4] ; CLOCK      ; 8.813 ; 8.813 ; Rise       ; CLOCK           ;
+;  Display_7seg[5] ; CLOCK      ; 8.670 ; 8.670 ; Rise       ; CLOCK           ;
+;  Display_7seg[6] ; CLOCK      ; 8.804 ; 8.804 ; Rise       ; CLOCK           ;
+; Sobe             ; CLOCK      ; 8.250 ; 8.250 ; Rise       ; CLOCK           ;
++------------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------+
+; Fast Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; CLOCK ; -1.011 ; -2.856        ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; CLOCK ; 0.215 ; 0.000         ;
++-------+-------+---------------+
+
+
++-------------------------------+
+; Fast Model Recovery Summary   ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; CLOCK ; 0.228 ; 0.000         ;
++-------+-------+---------------+
+
+
++-------------------------------+
+; Fast Model Removal Summary    ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; CLOCK ; 0.580 ; 0.000         ;
++-------+-------+---------------+
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; CLOCK ; -1.380 ; -28.380               ;
++-------+--------+-----------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'CLOCK'                                                                                                                                                                                            ;
++--------+-------------------------------------------------------------------+-------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                         ; To Node                                                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------------------------------------------+-------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.011 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[0] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 2.043      ;
+; -1.007 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[0] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 2.039      ;
+; -1.006 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[2] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 2.038      ;
+; -1.006 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[0] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 2.038      ;
+; -1.002 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[2] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 2.034      ;
+; -1.002 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[0] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 2.034      ;
+; -0.999 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[0] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 2.031      ;
+; -0.997 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[0] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 2.029      ;
+; -0.995 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[0] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 2.027      ;
+; -0.993 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[0] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 2.025      ;
+; -0.972 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[1] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 2.004      ;
+; -0.968 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[1] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 2.000      ;
+; -0.959 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[1] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.991      ;
+; -0.955 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[1] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.987      ;
+; -0.952 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[1] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.984      ;
+; -0.949 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[1] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.981      ;
+; -0.948 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[1] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.980      ;
+; -0.945 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[1] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.977      ;
+; -0.935 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[2] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.967      ;
+; -0.931 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[2] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.963      ;
+; -0.923 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[2] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.955      ;
+; -0.919 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[2] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.951      ;
+; -0.907 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[2] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.939      ;
+; -0.903 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[2] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.935      ;
+; -0.855 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[3] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.887      ;
+; -0.851 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[3] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.883      ;
+; -0.838 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[2] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.870      ;
+; -0.837 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[0] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.869      ;
+; -0.832 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[0] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.864      ;
+; -0.825 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[0] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.857      ;
+; -0.823 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[0] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.855      ;
+; -0.805 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[3] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.837      ;
+; -0.804 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[1] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.836      ;
+; -0.801 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[3] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.833      ;
+; -0.791 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[1] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.823      ;
+; -0.790 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[3] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.822      ;
+; -0.786 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[3] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.818      ;
+; -0.784 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[1] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.816      ;
+; -0.782 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[3] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.814      ;
+; -0.781 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[1] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.813      ;
+; -0.778 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[3] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.810      ;
+; -0.767 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[2] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.799      ;
+; -0.755 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[2] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.787      ;
+; -0.739 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[2] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.771      ;
+; -0.687 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[3] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.719      ;
+; -0.637 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[3] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.669      ;
+; -0.622 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[3] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.654      ;
+; -0.614 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[3] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.646      ;
+; -0.121 ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[3]              ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.153      ;
+; -0.117 ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[3]              ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.149      ;
+; -0.077 ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[1]              ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.109      ;
+; -0.073 ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[1]              ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 1.105      ;
+; 0.047  ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[3]              ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.985      ;
+; 0.082  ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[2]              ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.950      ;
+; 0.086  ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[2]              ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.946      ;
+; 0.089  ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[0]              ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.943      ;
+; 0.093  ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[0]              ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.939      ;
+; 0.103  ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[1]              ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.929      ;
+; 0.250  ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[2]              ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.782      ;
+; 0.269  ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[0]              ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.763      ;
+; 0.299  ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[2]              ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[2] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.733      ;
+; 0.319  ; Controladora:instancia_controladora|estado_atual.S4               ; Datapath:instance_datapath|RegW:instancia_Reg_SD|Q[1]             ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.713      ;
+; 0.319  ; Controladora:instancia_controladora|estado_atual.S4               ; Datapath:instance_datapath|RegW:instancia_Reg_SD|Q[0]             ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.713      ;
+; 0.337  ; Controladora:instancia_controladora|estado_atual.S1               ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.695      ;
+; 0.341  ; Controladora:instancia_controladora|estado_atual.S1               ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.691      ;
+; 0.355  ; Controladora:instancia_controladora|estado_atual.S1               ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[0]              ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.677      ;
+; 0.355  ; Controladora:instancia_controladora|estado_atual.S1               ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[1]              ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.677      ;
+; 0.355  ; Controladora:instancia_controladora|estado_atual.S1               ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[2]              ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.677      ;
+; 0.355  ; Controladora:instancia_controladora|estado_atual.S1               ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[3]              ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.677      ;
+; 0.355  ; Controladora:instancia_controladora|estado_atual.S1               ; Datapath:instance_datapath|RegW:instancia_Reg_SD|Q[1]             ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.677      ;
+; 0.355  ; Controladora:instancia_controladora|estado_atual.S1               ; Datapath:instance_datapath|RegW:instancia_Reg_SD|Q[0]             ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.677      ;
+; 0.381  ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[2] ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[2] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.651      ;
+; 0.452  ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[0]              ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[0] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.580      ;
+; 0.452  ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[3] ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[3] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.580      ;
+; 0.455  ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[3]              ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[3] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.577      ;
+; 0.456  ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[2] ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[2] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.576      ;
+; 0.462  ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[3] ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[3] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.570      ;
+; 0.466  ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[1] ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[1] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.566      ;
+; 0.472  ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[0] ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[0] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.560      ;
+; 0.472  ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[3] ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[3] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.560      ;
+; 0.482  ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[0] ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[0] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.550      ;
+; 0.489  ; Controladora:instancia_controladora|estado_atual.S2               ; Datapath:instance_datapath|RegW:instancia_Reg_SD|Q[0]             ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.543      ;
+; 0.498  ; Controladora:instancia_controladora|estado_atual.S1               ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.534      ;
+; 0.549  ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[1]              ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[1] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.483      ;
+; 0.551  ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[1] ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[1] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.481      ;
+; 0.553  ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[2] ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[2] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.479      ;
+; 0.556  ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[0] ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[0] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.476      ;
+; 0.567  ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[1] ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[1] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.465      ;
+; 0.581  ; Controladora:instancia_controladora|estado_atual.S3               ; Datapath:instance_datapath|RegW:instancia_Reg_SD|Q[1]             ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.451      ;
+; 0.665  ; Controladora:instancia_controladora|estado_atual.S1               ; Controladora:instancia_controladora|estado_atual.S1               ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.367      ;
++--------+-------------------------------------------------------------------+-------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'CLOCK'                                                                                                                                                                                            ;
++-------+-------------------------------------------------------------------+-------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                         ; To Node                                                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------------------------------------------+-------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; Controladora:instancia_controladora|estado_atual.S1               ; Controladora:instancia_controladora|estado_atual.S1               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.299 ; Controladora:instancia_controladora|estado_atual.S3               ; Datapath:instance_datapath|RegW:instancia_Reg_SD|Q[1]             ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.451      ;
+; 0.313 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[1] ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[1] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.465      ;
+; 0.324 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[0] ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[0] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.476      ;
+; 0.327 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[2] ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[2] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.479      ;
+; 0.329 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[1] ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[1] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.481      ;
+; 0.331 ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[1]              ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[1] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.483      ;
+; 0.382 ; Controladora:instancia_controladora|estado_atual.S1               ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.534      ;
+; 0.391 ; Controladora:instancia_controladora|estado_atual.S2               ; Datapath:instance_datapath|RegW:instancia_Reg_SD|Q[0]             ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.543      ;
+; 0.398 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[0] ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[0] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.550      ;
+; 0.408 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[0] ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[0] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.560      ;
+; 0.408 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[3] ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[3] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.560      ;
+; 0.414 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[1] ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[1] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.566      ;
+; 0.418 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[3] ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[3] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.570      ;
+; 0.424 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[2] ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[2] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.576      ;
+; 0.425 ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[3]              ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[3] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.577      ;
+; 0.428 ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[0]              ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[0] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.580      ;
+; 0.428 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[3] ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[3] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.580      ;
+; 0.499 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[2] ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[2] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.651      ;
+; 0.525 ; Controladora:instancia_controladora|estado_atual.S1               ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[0]              ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.677      ;
+; 0.525 ; Controladora:instancia_controladora|estado_atual.S1               ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[1]              ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.677      ;
+; 0.525 ; Controladora:instancia_controladora|estado_atual.S1               ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[2]              ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.677      ;
+; 0.525 ; Controladora:instancia_controladora|estado_atual.S1               ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[3]              ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.677      ;
+; 0.525 ; Controladora:instancia_controladora|estado_atual.S1               ; Datapath:instance_datapath|RegW:instancia_Reg_SD|Q[1]             ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.677      ;
+; 0.525 ; Controladora:instancia_controladora|estado_atual.S1               ; Datapath:instance_datapath|RegW:instancia_Reg_SD|Q[0]             ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.677      ;
+; 0.539 ; Controladora:instancia_controladora|estado_atual.S1               ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.691      ;
+; 0.543 ; Controladora:instancia_controladora|estado_atual.S1               ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.695      ;
+; 0.561 ; Controladora:instancia_controladora|estado_atual.S4               ; Datapath:instance_datapath|RegW:instancia_Reg_SD|Q[1]             ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.713      ;
+; 0.561 ; Controladora:instancia_controladora|estado_atual.S4               ; Datapath:instance_datapath|RegW:instancia_Reg_SD|Q[0]             ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.713      ;
+; 0.581 ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[2]              ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[2] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.733      ;
+; 0.584 ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[2]              ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.736      ;
+; 0.590 ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[0]              ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.742      ;
+; 0.594 ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[0]              ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.746      ;
+; 0.611 ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[0]              ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.763      ;
+; 0.698 ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[2]              ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.850      ;
+; 0.704 ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[2]              ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.856      ;
+; 0.735 ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[3]              ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.887      ;
+; 0.741 ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[3]              ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.893      ;
+; 0.752 ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[1]              ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.904      ;
+; 0.756 ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[1]              ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.908      ;
+; 0.777 ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[1]              ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.929      ;
+; 0.783 ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[3]              ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.935      ;
+; 1.279 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[3] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.431      ;
+; 1.281 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[3] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.433      ;
+; 1.283 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[3] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.435      ;
+; 1.285 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[3] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.437      ;
+; 1.292 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[3] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.444      ;
+; 1.296 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[3] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.448      ;
+; 1.297 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[3] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.449      ;
+; 1.299 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[3] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.451      ;
+; 1.305 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[2] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.457      ;
+; 1.306 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[2] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.458      ;
+; 1.310 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[2] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.462      ;
+; 1.310 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[3] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.462      ;
+; 1.342 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[1] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.494      ;
+; 1.350 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[1] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.502      ;
+; 1.354 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[3] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.506      ;
+; 1.358 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[3] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.510      ;
+; 1.364 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[1] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.516      ;
+; 1.368 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[1] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.520      ;
+; 1.372 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[3] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.524      ;
+; 1.372 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[1] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.524      ;
+; 1.376 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[1] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.528      ;
+; 1.399 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[2] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.551      ;
+; 1.400 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[2] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.552      ;
+; 1.402 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[2] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.554      ;
+; 1.403 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[2] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.555      ;
+; 1.403 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[2] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.555      ;
+; 1.407 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[2] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.559      ;
+; 1.409 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[2] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.561      ;
+; 1.410 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[2] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.562      ;
+; 1.413 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[2] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.565      ;
+; 1.430 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[1] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.582      ;
+; 1.448 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[1] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.600      ;
+; 1.449 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[1] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.601      ;
+; 1.453 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[1] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.605      ;
+; 1.463 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[0] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.615      ;
+; 1.469 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[1] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.621      ;
+; 1.473 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[1] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.625      ;
+; 1.477 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[0] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.629      ;
+; 1.482 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[0] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.634      ;
+; 1.486 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[0] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.638      ;
+; 1.488 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[0] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.640      ;
+; 1.492 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[0] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.644      ;
+; 1.496 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[0] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.648      ;
+; 1.500 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[0] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.652      ;
+; 1.501 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[0] ; Controladora:instancia_controladora|estado_atual.S3               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.653      ;
+; 1.505 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[0] ; Controladora:instancia_controladora|estado_atual.S4               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.657      ;
+; 1.506 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[0] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.658      ;
+; 1.519 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[0] ; Controladora:instancia_controladora|estado_atual.S2               ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 1.671      ;
++-------+-------------------------------------------------------------------+-------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Recovery: 'CLOCK'                                                                                                                                                                          ;
++-------+-----------------------------------------------------+-------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                           ; To Node                                                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------------------------+-------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.228 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[0] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.804      ;
+; 0.228 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[0] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.804      ;
+; 0.228 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[1] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.804      ;
+; 0.228 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[1] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.804      ;
+; 0.228 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[2] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.804      ;
+; 0.228 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[2] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.804      ;
+; 0.228 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[3] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.804      ;
+; 0.228 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[3] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.804      ;
+; 0.300 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[0] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.732      ;
+; 0.300 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[0] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.732      ;
+; 0.300 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[1] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.732      ;
+; 0.300 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[1] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.732      ;
+; 0.300 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[2] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.732      ;
+; 0.300 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[2] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.732      ;
+; 0.300 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[3] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.732      ;
+; 0.300 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[3] ; CLOCK        ; CLOCK       ; 1.000        ; 0.000      ; 0.732      ;
++-------+-----------------------------------------------------+-------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Removal: 'CLOCK'                                                                                                                                                                           ;
++-------+-----------------------------------------------------+-------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                           ; To Node                                                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------------------------+-------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.580 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[0] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.732      ;
+; 0.580 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[0] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.732      ;
+; 0.580 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[1] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.732      ;
+; 0.580 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[1] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.732      ;
+; 0.580 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[2] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.732      ;
+; 0.580 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[2] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.732      ;
+; 0.580 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[3] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.732      ;
+; 0.580 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[3] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.732      ;
+; 0.652 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[0] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.804      ;
+; 0.652 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[0] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.804      ;
+; 0.652 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[1] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.804      ;
+; 0.652 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[1] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.804      ;
+; 0.652 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[2] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.804      ;
+; 0.652 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[2] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.804      ;
+; 0.652 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[3] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.804      ;
+; 0.652 ; Controladora:instancia_controladora|estado_atual.S0 ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[3] ; CLOCK        ; CLOCK       ; 0.000        ; 0.000      ; 0.804      ;
++-------+-----------------------------------------------------+-------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'CLOCK'                                                                                                            ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                            ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; CLOCK ; Rise       ; CLOCK                                                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; Controladora:instancia_controladora|estado_atual.S0               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; Controladora:instancia_controladora|estado_atual.S0               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; Controladora:instancia_controladora|estado_atual.S1               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; Controladora:instancia_controladora|estado_atual.S1               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; Controladora:instancia_controladora|estado_atual.S2               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; Controladora:instancia_controladora|estado_atual.S2               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; Controladora:instancia_controladora|estado_atual.S3               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; Controladora:instancia_controladora|estado_atual.S3               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; Controladora:instancia_controladora|estado_atual.S4               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; Controladora:instancia_controladora|estado_atual.S4               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[0]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[0]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[1]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[1]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[2]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[2]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[3]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; Datapath:instance_datapath|RegW:instancia_Reg_E|Q[3]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; Datapath:instance_datapath|RegW:instancia_Reg_SD|Q[0]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; Datapath:instance_datapath|RegW:instancia_Reg_SD|Q[0]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; Datapath:instance_datapath|RegW:instancia_Reg_SD|Q[1]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; Datapath:instance_datapath|RegW:instancia_Reg_SD|Q[1]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var1[3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var2[3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var3[3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK ; Rise       ; Datapath:instance_datapath|mean_4_clocks:instancia_Reg_MA|var4[3] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; CLOCK|combout                                                     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; CLOCK|combout                                                     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; CLOCK~clkctrl|inclk[0]                                            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; CLOCK~clkctrl|inclk[0]                                            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; CLOCK~clkctrl|outclk                                              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; CLOCK~clkctrl|outclk                                              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_E|Q[0]|clk                        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_E|Q[0]|clk                        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_E|Q[1]|clk                        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_E|Q[1]|clk                        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_E|Q[2]|clk                        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_E|Q[2]|clk                        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_E|Q[3]|clk                        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_E|Q[3]|clk                        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var1[0]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var1[0]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var1[1]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var1[1]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var1[2]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var1[2]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var1[3]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var1[3]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var2[0]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var2[0]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var2[1]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var2[1]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var2[2]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var2[2]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var2[3]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var2[3]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var3[0]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var3[0]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var3[1]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var3[1]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var3[2]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var3[2]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var3[3]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var3[3]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var4[0]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var4[0]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var4[1]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var4[1]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var4[2]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var4[2]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK ; Rise       ; instance_datapath|instancia_Reg_MA|var4[3]|clk                    ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; E[*]      ; CLOCK      ; 0.176  ; 0.176  ; Rise       ; CLOCK           ;
+;  E[0]     ; CLOCK      ; 0.110  ; 0.110  ; Rise       ; CLOCK           ;
+;  E[1]     ; CLOCK      ; 0.176  ; 0.176  ; Rise       ; CLOCK           ;
+;  E[2]     ; CLOCK      ; 0.121  ; 0.121  ; Rise       ; CLOCK           ;
+;  E[3]     ; CLOCK      ; -0.658 ; -0.658 ; Rise       ; CLOCK           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; E[*]      ; CLOCK      ; 0.778  ; 0.778  ; Rise       ; CLOCK           ;
+;  E[0]     ; CLOCK      ; 0.010  ; 0.010  ; Rise       ; CLOCK           ;
+;  E[1]     ; CLOCK      ; -0.056 ; -0.056 ; Rise       ; CLOCK           ;
+;  E[2]     ; CLOCK      ; -0.001 ; -0.001 ; Rise       ; CLOCK           ;
+;  E[3]     ; CLOCK      ; 0.778  ; 0.778  ; Rise       ; CLOCK           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Clock to Output Times                                                        ;
++------------------+------------+-------+-------+------------+-----------------+
+; Data Port        ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------------+------------+-------+-------+------------+-----------------+
+; Desce            ; CLOCK      ; 4.313 ; 4.313 ; Rise       ; CLOCK           ;
+; Display_7seg[*]  ; CLOCK      ; 5.457 ; 5.457 ; Rise       ; CLOCK           ;
+;  Display_7seg[0] ; CLOCK      ; 5.457 ; 5.457 ; Rise       ; CLOCK           ;
+;  Display_7seg[1] ; CLOCK      ; 5.320 ; 5.320 ; Rise       ; CLOCK           ;
+;  Display_7seg[2] ; CLOCK      ; 5.330 ; 5.330 ; Rise       ; CLOCK           ;
+;  Display_7seg[3] ; CLOCK      ; 5.330 ; 5.330 ; Rise       ; CLOCK           ;
+;  Display_7seg[4] ; CLOCK      ; 5.331 ; 5.331 ; Rise       ; CLOCK           ;
+;  Display_7seg[5] ; CLOCK      ; 5.069 ; 5.069 ; Rise       ; CLOCK           ;
+;  Display_7seg[6] ; CLOCK      ; 5.321 ; 5.321 ; Rise       ; CLOCK           ;
+; Sobe             ; CLOCK      ; 4.511 ; 4.511 ; Rise       ; CLOCK           ;
++------------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                ;
++------------------+------------+-------+-------+------------+-----------------+
+; Data Port        ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------------+------------+-------+-------+------------+-----------------+
+; Desce            ; CLOCK      ; 4.313 ; 4.313 ; Rise       ; CLOCK           ;
+; Display_7seg[*]  ; CLOCK      ; 4.608 ; 4.608 ; Rise       ; CLOCK           ;
+;  Display_7seg[0] ; CLOCK      ; 4.814 ; 4.814 ; Rise       ; CLOCK           ;
+;  Display_7seg[1] ; CLOCK      ; 4.686 ; 4.686 ; Rise       ; CLOCK           ;
+;  Display_7seg[2] ; CLOCK      ; 4.699 ; 4.699 ; Rise       ; CLOCK           ;
+;  Display_7seg[3] ; CLOCK      ; 4.696 ; 4.696 ; Rise       ; CLOCK           ;
+;  Display_7seg[4] ; CLOCK      ; 4.695 ; 4.695 ; Rise       ; CLOCK           ;
+;  Display_7seg[5] ; CLOCK      ; 4.608 ; 4.608 ; Rise       ; CLOCK           ;
+;  Display_7seg[6] ; CLOCK      ; 4.685 ; 4.685 ; Rise       ; CLOCK           ;
+; Sobe             ; CLOCK      ; 4.511 ; 4.511 ; Rise       ; CLOCK           ;
++------------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                           ;
++------------------+---------+-------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -3.730  ; 0.215 ; -0.403   ; 0.580   ; -1.380              ;
+;  CLOCK           ; -3.730  ; 0.215 ; -0.403   ; 0.580   ; -1.380              ;
+; Design-wide TNS  ; -13.958 ; 0.0   ; -5.288   ; 0.0     ; -28.38              ;
+;  CLOCK           ; -13.958 ; 0.000 ; -5.288   ; 0.000   ; -28.380             ;
++------------------+---------+-------+----------+---------+---------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; E[*]      ; CLOCK      ; 0.851  ; 0.851  ; Rise       ; CLOCK           ;
+;  E[0]     ; CLOCK      ; 0.742  ; 0.742  ; Rise       ; CLOCK           ;
+;  E[1]     ; CLOCK      ; 0.851  ; 0.851  ; Rise       ; CLOCK           ;
+;  E[2]     ; CLOCK      ; 0.690  ; 0.690  ; Rise       ; CLOCK           ;
+;  E[3]     ; CLOCK      ; -0.658 ; -0.658 ; Rise       ; CLOCK           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; E[*]      ; CLOCK      ; 0.968  ; 0.968  ; Rise       ; CLOCK           ;
+;  E[0]     ; CLOCK      ; 0.010  ; 0.010  ; Rise       ; CLOCK           ;
+;  E[1]     ; CLOCK      ; -0.056 ; -0.056 ; Rise       ; CLOCK           ;
+;  E[2]     ; CLOCK      ; -0.001 ; -0.001 ; Rise       ; CLOCK           ;
+;  E[3]     ; CLOCK      ; 0.968  ; 0.968  ; Rise       ; CLOCK           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------------+
+; Clock to Output Times                                                          ;
++------------------+------------+--------+--------+------------+-----------------+
+; Data Port        ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------------+------------+--------+--------+------------+-----------------+
+; Desce            ; CLOCK      ; 7.742  ; 7.742  ; Rise       ; CLOCK           ;
+; Display_7seg[*]  ; CLOCK      ; 10.621 ; 10.621 ; Rise       ; CLOCK           ;
+;  Display_7seg[0] ; CLOCK      ; 10.621 ; 10.621 ; Rise       ; CLOCK           ;
+;  Display_7seg[1] ; CLOCK      ; 10.368 ; 10.368 ; Rise       ; CLOCK           ;
+;  Display_7seg[2] ; CLOCK      ; 10.379 ; 10.379 ; Rise       ; CLOCK           ;
+;  Display_7seg[3] ; CLOCK      ; 10.341 ; 10.341 ; Rise       ; CLOCK           ;
+;  Display_7seg[4] ; CLOCK      ; 10.368 ; 10.368 ; Rise       ; CLOCK           ;
+;  Display_7seg[5] ; CLOCK      ; 9.837  ; 9.837  ; Rise       ; CLOCK           ;
+;  Display_7seg[6] ; CLOCK      ; 10.361 ; 10.361 ; Rise       ; CLOCK           ;
+; Sobe             ; CLOCK      ; 8.250  ; 8.250  ; Rise       ; CLOCK           ;
++------------------+------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                ;
++------------------+------------+-------+-------+------------+-----------------+
+; Data Port        ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------------+------------+-------+-------+------------+-----------------+
+; Desce            ; CLOCK      ; 4.313 ; 4.313 ; Rise       ; CLOCK           ;
+; Display_7seg[*]  ; CLOCK      ; 4.608 ; 4.608 ; Rise       ; CLOCK           ;
+;  Display_7seg[0] ; CLOCK      ; 4.814 ; 4.814 ; Rise       ; CLOCK           ;
+;  Display_7seg[1] ; CLOCK      ; 4.686 ; 4.686 ; Rise       ; CLOCK           ;
+;  Display_7seg[2] ; CLOCK      ; 4.699 ; 4.699 ; Rise       ; CLOCK           ;
+;  Display_7seg[3] ; CLOCK      ; 4.696 ; 4.696 ; Rise       ; CLOCK           ;
+;  Display_7seg[4] ; CLOCK      ; 4.695 ; 4.695 ; Rise       ; CLOCK           ;
+;  Display_7seg[5] ; CLOCK      ; 4.608 ; 4.608 ; Rise       ; CLOCK           ;
+;  Display_7seg[6] ; CLOCK      ; 4.685 ; 4.685 ; Rise       ; CLOCK           ;
+; Sobe             ; CLOCK      ; 4.511 ; 4.511 ; Rise       ; CLOCK           ;
++------------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLOCK      ; CLOCK    ; 1500     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLOCK      ; CLOCK    ; 1500     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Recovery Transfers                                                ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLOCK      ; CLOCK    ; 16       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Removal Transfers                                                 ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLOCK      ; CLOCK    ; 16       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 5     ; 5    ;
+; Unconstrained Input Port Paths  ; 9     ; 9    ;
+; Unconstrained Output Ports      ; 9     ; 9    ;
+; Unconstrained Output Port Paths ; 114   ; 114  ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Fri Dec 13 22:46:50 2024
+Info: Command: quartus_sta Sinalizador -c Sinalizador
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'Sinalizador.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name CLOCK CLOCK
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -3.730
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -3.730       -13.958 CLOCK 
+Info (332146): Worst-case hold slack is 0.391
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.391         0.000 CLOCK 
+Info (332146): Worst-case recovery slack is -0.403
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.403        -5.288 CLOCK 
+Info (332146): Worst-case removal slack is 1.028
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     1.028         0.000 CLOCK 
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -28.380 CLOCK 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -1.011
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.011        -2.856 CLOCK 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 CLOCK 
+Info (332146): Worst-case recovery slack is 0.228
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.228         0.000 CLOCK 
+Info (332146): Worst-case removal slack is 0.580
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.580         0.000 CLOCK 
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -28.380 CLOCK 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4540 megabytes
+    Info: Processing ended: Fri Dec 13 22:46:51 2024
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+

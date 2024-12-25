@@ -1,0 +1,291 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Hermes\PN2\Aula 8 e 9\Tudo\Sinalizador\simulation\modelsim
+Ebcd_7seg
+Z1 w1734138597
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dD:\Hermes\PN2\Aula 8 e 9\Tudo\Sinalizador\simulation\modelsim
+Z5 8D:/Hermes/PN2/Aula 8 e 9/Tudo/BCD_7seg/BCD_7seg/BCD_7seg.vhd
+Z6 FD:/Hermes/PN2/Aula 8 e 9/Tudo/BCD_7seg/BCD_7seg/BCD_7seg.vhd
+l0
+L4
+V`o6UecCXXcKXh[NWIfEzD0
+Z7 OV;C;10.1d;51
+31
+Z8 !s108 1734140188.469000
+Z9 !s90 -reportprogress|300|-93|-work|work|D:/Hermes/PN2/Aula 8 e 9/Tudo/BCD_7seg/BCD_7seg/BCD_7seg.vhd|
+Z10 !s107 D:/Hermes/PN2/Aula 8 e 9/Tudo/BCD_7seg/BCD_7seg/BCD_7seg.vhd|
+Z11 o-93 -work work -O0
+Z12 tExplicit 1
+!s100 Mj?kZhT<CDN2m7femMXLG1
+!i10b 1
+Awith_select_bcd7seg
+R2
+R3
+DEx4 work 8 bcd_7seg 0 22 `o6UecCXXcKXh[NWIfEzD0
+l12
+L11
+V68SOUlK];EB9_6D`f82`R3
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 m5lPj[nI>=i7UWd9WO7_L0
+!i10b 1
+Ecomparador
+Z13 w1734138600
+Z14 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+R2
+R3
+R4
+Z15 8D:/Hermes/PN2/Aula 8 e 9/Tudo/Comparador/Comparador/comparador.vhd
+Z16 FD:/Hermes/PN2/Aula 8 e 9/Tudo/Comparador/Comparador/comparador.vhd
+l0
+L5
+V2SVz;cgSKcI93>7[N_mN83
+R7
+31
+Z17 !s108 1734140188.610000
+Z18 !s90 -reportprogress|300|-93|-work|work|D:/Hermes/PN2/Aula 8 e 9/Tudo/Comparador/Comparador/comparador.vhd|
+Z19 !s107 D:/Hermes/PN2/Aula 8 e 9/Tudo/Comparador/Comparador/comparador.vhd|
+R11
+R12
+!s100 U7=S=;GWUYdm;nU6RYGa81
+!i10b 1
+Artl
+R14
+R2
+R3
+DEx4 work 10 comparador 0 22 2SVz;cgSKcI93>7[N_mN83
+l22
+L21
+V:El3X[cgia[LfW^V^ozQ?0
+R7
+31
+R17
+R18
+R19
+R11
+R12
+!s100 Db:CfBS>7AE6P`ZfmOeOk2
+!i10b 1
+Econtroladora
+Z20 w1734138602
+R2
+R3
+R4
+Z21 8D:/Hermes/PN2/Aula 8 e 9/Tudo/Controladora/Controladora.vhd
+Z22 FD:/Hermes/PN2/Aula 8 e 9/Tudo/Controladora/Controladora.vhd
+l0
+L4
+V2fe5kF<?geKj<Jj>BVJ;c1
+R7
+31
+Z23 !s108 1734140189.079000
+Z24 !s90 -reportprogress|300|-93|-work|work|D:/Hermes/PN2/Aula 8 e 9/Tudo/Controladora/Controladora.vhd|
+Z25 !s107 D:/Hermes/PN2/Aula 8 e 9/Tudo/Controladora/Controladora.vhd|
+R11
+R12
+!s100 fQ0nRf;hUcW?MVcQ4zDX@1
+!i10b 1
+Aarch
+R2
+R3
+DEx4 work 12 controladora 0 22 2fe5kF<?geKj<Jj>BVJ;c1
+l21
+L18
+V?b^1FQzhJ=E6Z^boW<8if1
+R7
+31
+R23
+R24
+R25
+R11
+R12
+!s100 mha9gQ=1f^SYTciBU:SKb0
+!i10b 1
+Edatapath
+Z26 w1734138605
+R2
+R3
+R4
+Z27 8D:/Hermes/PN2/Aula 8 e 9/Tudo/Datapath/Datapath.vhd
+Z28 FD:/Hermes/PN2/Aula 8 e 9/Tudo/Datapath/Datapath.vhd
+l0
+L4
+VdZ<jYmFKUbEDbV6LIeVZh2
+R7
+31
+Z29 !s108 1734140188.735000
+Z30 !s90 -reportprogress|300|-93|-work|work|D:/Hermes/PN2/Aula 8 e 9/Tudo/Datapath/Datapath.vhd|
+Z31 !s107 D:/Hermes/PN2/Aula 8 e 9/Tudo/Datapath/Datapath.vhd|
+R11
+R12
+!s100 Y4S7F_GV_RZ46h<HCk@e?1
+!i10b 1
+Artl
+R2
+R3
+DEx4 work 8 datapath 0 22 dZ<jYmFKUbEDbV6LIeVZh2
+l89
+L27
+Vi`zgPI^:ho4?Ul4WT==Sh1
+R7
+31
+R29
+R30
+R31
+R11
+R12
+!s100 Rh?]bgHzg?:=>>LBSkZ?:1
+!i10b 1
+Emean_4_clocks
+Z32 w1734138610
+R14
+R2
+R3
+R4
+Z33 8D:/Hermes/PN2/Aula 8 e 9/Tudo/Reg_MA/mean_4_clocks/mean_4_clocks.vhd
+Z34 FD:/Hermes/PN2/Aula 8 e 9/Tudo/Reg_MA/mean_4_clocks/mean_4_clocks.vhd
+l0
+L5
+V]c8n30J?OJaFU9^G1fF3Z2
+R7
+31
+Z35 !s108 1734140188.844000
+Z36 !s90 -reportprogress|300|-93|-work|work|D:/Hermes/PN2/Aula 8 e 9/Tudo/Reg_MA/mean_4_clocks/mean_4_clocks.vhd|
+Z37 !s107 D:/Hermes/PN2/Aula 8 e 9/Tudo/Reg_MA/mean_4_clocks/mean_4_clocks.vhd|
+R11
+R12
+!s100 _jlXe_dl]V=ZDG[E2nKWz1
+!i10b 1
+Aarch
+R14
+R2
+R3
+DEx4 work 13 mean_4_clocks 0 22 ]c8n30J?OJaFU9^G1fF3Z2
+l26
+L23
+VDIT>[o4YK==0RFdf[RP262
+R7
+31
+R35
+R36
+R37
+R11
+R12
+!s100 TiGBYl9Y2:TRh=7:QDkzK0
+!i10b 1
+Eregw
+Z38 w1734138612
+R2
+R3
+R4
+Z39 8D:/Hermes/PN2/Aula 8 e 9/Tudo/RegW/RegW/RegW.vhd
+Z40 FD:/Hermes/PN2/Aula 8 e 9/Tudo/RegW/RegW/RegW.vhd
+l0
+L4
+VJlT9:3:G=bSJ8cXG;2kSC2
+R7
+31
+Z41 !s108 1734140188.985000
+Z42 !s90 -reportprogress|300|-93|-work|work|D:/Hermes/PN2/Aula 8 e 9/Tudo/RegW/RegW/RegW.vhd|
+Z43 !s107 D:/Hermes/PN2/Aula 8 e 9/Tudo/RegW/RegW/RegW.vhd|
+R11
+R12
+!s100 keCj>i:3`ON_T7S5AlOJ11
+!i10b 1
+Artl
+R2
+R3
+DEx4 work 4 regw 0 22 JlT9:3:G=bSJ8cXG;2kSC2
+l22
+L21
+VL=Z^OPB0KJfd93H8X?8m>0
+R7
+31
+R41
+R42
+R43
+R11
+R12
+!s100 _0HKVA`:nFjB@3n_XAh>^1
+!i10b 1
+Esinalizador
+Z44 w1734138615
+R2
+R3
+R4
+Z45 8D:/Hermes/PN2/Aula 8 e 9/Tudo/Sinalizador/Sinalizador.vhd
+Z46 FD:/Hermes/PN2/Aula 8 e 9/Tudo/Sinalizador/Sinalizador.vhd
+l0
+L4
+V=6aXM><hg4[WLk`E<mnA>0
+R7
+31
+Z47 !s108 1734140189.204000
+Z48 !s90 -reportprogress|300|-93|-work|work|D:/Hermes/PN2/Aula 8 e 9/Tudo/Sinalizador/Sinalizador.vhd|
+Z49 !s107 D:/Hermes/PN2/Aula 8 e 9/Tudo/Sinalizador/Sinalizador.vhd|
+R11
+R12
+!s100 Gf_S@S9n;lb9e<;5H2BDN2
+!i10b 1
+Afsm
+R2
+R3
+DEx4 work 11 sinalizador 0 22 =6aXM><hg4[WLk`E<mnA>0
+l60
+L18
+VP<Y`@S6:c:Cio3`ci>BdP2
+R7
+31
+R47
+R48
+R49
+R11
+R12
+!s100 MDlO;=zKF6haAF=WOBDhE1
+!i10b 1
+Etb_sinalizador
+R44
+R14
+R2
+R3
+R4
+Z50 8D:/Hermes/PN2/Aula 8 e 9/Tudo/Sinalizador/tb_sinalizador.vhd
+Z51 FD:/Hermes/PN2/Aula 8 e 9/Tudo/Sinalizador/tb_sinalizador.vhd
+l0
+L5
+VEFX8I4m:5YXZOmMFaGB7S1
+!s100 M=`TQ<zK<JbCjH@4AY?BI2
+R7
+31
+!i10b 1
+Z52 !s108 1734140189.313000
+Z53 !s90 -reportprogress|300|-93|-work|work|D:/Hermes/PN2/Aula 8 e 9/Tudo/Sinalizador/tb_sinalizador.vhd|
+Z54 !s107 D:/Hermes/PN2/Aula 8 e 9/Tudo/Sinalizador/tb_sinalizador.vhd|
+R11
+R12
+Aarch
+R14
+R2
+R3
+DEx4 work 14 tb_sinalizador 0 22 EFX8I4m:5YXZOmMFaGB7S1
+l29
+L8
+VVF2bP6RgJ8@^OSU4H?LMR1
+!s100 2@nkO^jn@eM3dnDaT609D3
+R7
+31
+!i10b 1
+R52
+R53
+R54
+R11
+R12

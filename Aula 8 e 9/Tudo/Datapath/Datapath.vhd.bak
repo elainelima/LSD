@@ -1,0 +1,32 @@
+LIBRARY IEEE;
+use ieee.std_logic_1164.all;
+
+entity Datapath is
+	generic
+	(
+		DATA_WIDTH : natural := 4
+	);
+
+	port( 
+		E: in std_logic_vector((DATA_WIDTH-1) downto 0);
+		clock: in std_logic; 
+		Reset_MA: in std_logic;
+		Load_E: in std_logic;
+		Pino_Descendo: in std_logic;
+		Pino_Subindo: in std_logic;
+		Pino_Atualize: in std_logic; 
+		Sobe: out std_logic;
+		Desce: out std_logic;
+		Pino_Maior: out std_logic;
+		Pino_Menor: out std_logic;
+		Media: out std_logic_vector((DATA_WIDTH-1) downto 0);
+		
+   );
+end Datapath;
+
+architecture RTL of Datapath is
+
+begin
+ 
+	
+end RTL;
